@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <changeSet id="create-customer-table" author="Leidra" context="schema">
+        <createTable tableName="customer">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" primaryKeyName="pk_customer" nullable="false" />
+            </column>
+            <column name="name" type="TEXT">
+            </column>
+            <column name="created_on" type="TIMESTAMP WITH TIME ZONE" defaultValue="NOW()"/>
+            <column name="updated_on" type="TIMESTAMP WITH TIME ZONE" defaultValue="NOW()"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="load-customers-data" author="Leidra" context="data">
+        <loadData tableName="customer" relativeToChangelogFile="true" file="../data/customers.csv">
+            <column header="id" name="id" type="UUID"/>
+            <column header="name" name="name" type="STRING"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

@@ -14,5 +14,4 @@ services:
     image: "liquibase/liquibase"
     command: --url=jdbc:postgresql://customer-db:5432/customers --username=customer --password=customer --changeLogFile=changelog.xml update
     volumes:
-      - ../liquibase/scripts/:/liquibase/scripts/
-      - ../liquibase/changelog.xml:/liquibase/changelog.xml
+      - ../src/main/resources/liquibase/:/liquibase/changelog
