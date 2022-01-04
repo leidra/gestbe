@@ -9,10 +9,10 @@ import java.util.stream.Stream;
 
 @Service
 @AllArgsConstructor
-public final class GetCustomers {
+public final class CustomersSearcher {
     private final CustomersRepository repository;
 
-    public Stream<Customer> findAll() {
+    public Stream<Customer> searchAll() {
         return repository.findAll();
     }
 }
