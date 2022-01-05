@@ -14,7 +14,7 @@
     </modules>
     <groupId>net.leidra</groupId>
     <artifactId>gestbe</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <name>gestbe</name>
     <description>GestBe</description>
     <properties>
@@ -35,6 +35,12 @@
                 <version>${testcontainers.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jeasy</groupId>
+                <artifactId>easy-random-core</artifactId>
+                <version>5.0.0</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

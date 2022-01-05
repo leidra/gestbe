@@ -7,6 +7,6 @@ import java.util.UUID;
 
 public record CustomerResponse(UUID id, String name) implements Serializable {
     public static CustomerResponse fromCustomer(final Customer customer) {
-        return new CustomerResponse(customer.id(), customer.name());
+        return new CustomerResponse(customer.id().id(), customer.name().name());
     }
 }
