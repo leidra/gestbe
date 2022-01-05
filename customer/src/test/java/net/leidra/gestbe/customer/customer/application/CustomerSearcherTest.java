@@ -13,15 +13,15 @@ import org.springframework.context.annotation.Import;
 import java.util.List;
 
 @Import({JdbcCustomersRepository.class})
-class CustomersSearcherTest extends PostgreSQLITContainer {
+class CustomerSearcherTest extends PostgreSQLITContainer {
 
-    private CustomersSearcher customersSearcher;
+    private CustomerSearcher customerSearcher;
     @Autowired
     private JdbcCustomersRepository repository;
 
     @BeforeEach
     void setUp() {
-        customersSearcher = new CustomersSearcher(repository);
+        customerSearcher = new CustomerSearcher(repository);
     }
 
     @AfterEach
@@ -31,7 +31,7 @@ class CustomersSearcherTest extends PostgreSQLITContainer {
     @Test
     void findAll() {
         List<Customer> expectedCustomers = repository.findAll().toList();
-        List<Customer> actualCustomers = customersSearcher.searchAll().toList();
+        List<Customer> actualCustomers = customerSearcher.searchAll().toList();
 
         Assertions.assertThat(actualCustomers).isEqualTo(expectedCustomers);
     }

@@ -9,26 +9,24 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
 
-import java.util.List;
-
 import static net.leidra.gestbe.customer.customer.domain.model.CustomerMother.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Import({JdbcCustomersRepository.class})
 class CustomersCRUDTest extends PostgreSQLITContainer {
 
-    private CustomersSearcher customersSearcher;
-    private CustomersSaver customersSaver;
-    private CustomersRemover customersRemover;
+    private CustomerSearcher customerSearcher;
+    private CustomerSaver customerSaver;
+    private CustomerRemover customerRemover;
 
     @Autowired
     private JdbcCustomersRepository repository;
 
     @BeforeEach
     void setUp() {
-        customersSearcher = new CustomersSearcher(repository);
-        customersSaver = new CustomersSaver(repository);
-        customersRemover = new CustomersRemover(repository);
+        customerSearcher = new CustomerSearcher(repository);
+        customerSaver = new CustomerSaver(repository);
+        customerRemover = new CustomerRemover(repository);
     }
 
     @AfterEach
@@ -36,24 +34,16 @@ class CustomersCRUDTest extends PostgreSQLITContainer {
     }
 
     @Test
-    void should_find_all_customers() {
-        List<Customer> expectedCustomers = repository.findAll().toList();
-        List<Customer> actualCustomers = customersSearcher.searchAll().toList();
-
-        assertThat(actualCustomers).isEqualTo(expectedCustomers);
-    }
-
-    @Test
     void should_create_modify_and_remove_a_customer() {
         final Customer customer = randomCustomer();
-        customersSaver.save(customer.id().id(), customer.name().name(), customer.createdOn().time(), customer.updatedOn().time());
+        customerSaver.save(customer.id().id(), customer.name().name());
         assertThat(repository.existsById(customer.id())).isTrue();
 
-        customersSaver.save(customer.id().id(), randomCustomerName().name(), randomAuditDateTime().time(), randomAuditDateTime().time());
+        customerSaver.save(customer.id().id(), randomCustomerName().name());
 
-        assertThat(customersSearcher.searchById(customer.id().id())).isNotEmpty();
+        assertThat(customerSearcher.searchById(customer.id().id())).isNotEmpty();
 
-        customersRemover.removeById(customer.id().id());
+        customerRemover.removeById(customer.id().id());
         assertThat(repository.existsById(customer.id())).isFalse();
     }
 
