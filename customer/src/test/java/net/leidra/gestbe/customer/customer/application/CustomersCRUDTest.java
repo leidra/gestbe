@@ -9,7 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
 
-import static net.leidra.gestbe.customer.customer.domain.model.CustomerMother.*;
+import static net.leidra.gestbe.customer.customer.domain.model.CustomerMother.randomCustomer;
+import static net.leidra.gestbe.customer.customer.domain.model.CustomerMother.randomCustomerName;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Import({JdbcCustomersRepository.class})
