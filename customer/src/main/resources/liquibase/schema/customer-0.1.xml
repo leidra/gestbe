@@ -18,6 +18,8 @@
         <loadData tableName="customer" relativeToChangelogFile="true" file="../data/customers.csv">
             <column header="id" name="id" type="UUID"/>
             <column header="name" name="name" type="STRING"/>
+            <column header="created_on" name="created_on" />
+            <column header="updated_on" name="updated_on" />
         </loadData>
     </changeSet>
 </databaseChangeLog>
