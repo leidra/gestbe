@@ -5,8 +5,6 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
 
-import javax.annotation.PreDestroy;
-
 @ActiveProfiles("test")
 public abstract class PostgreSQLTestContainer {
     private static final String IMAGE_VERSION = "postgres";
@@ -22,8 +20,4 @@ public abstract class PostgreSQLTestContainer {
         registry.add("spring.datasource.password", container::getPassword);
     }
 
-    @PreDestroy
-    void destroy() {
-        container.stop();
-    }
 }

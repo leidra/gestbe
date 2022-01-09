@@ -1,4 +1,4 @@
-package net.leidra.gestbe;
+package net.leidra.gestbe.customer.customer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;

@@ -1,10 +1,10 @@
 Feature: Rest endpoint which allows retrieving customers data
 
     Scenario: Retrieving all customers
-        Given a customer with id a26f508e-b442-4311-b604-1d0a82a98177 exists
+        Given a customer with id 'a26f508e-b442-4311-b604-1d0a82a98177' exists
         When I send a GET request to '/api/customers'
         Then the server return a 200 status code
-        And a body content like
+        And a response body content like
         """
         [{
             "id": "a26f508e-b442-4311-b604-1d0a82a98177",
