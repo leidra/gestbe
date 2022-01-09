@@ -32,7 +32,7 @@ public final class PutCustomersStepsDefinition extends CucumberCustomersContext 
     }
 
     @When("I send a PUT request to {string}")
-    public void when_a_get_is_sent(String endPoint) {
+    public void when_a_put_is_sent(String endPoint) {
         context.add(ENDPOINT, "http://localhost:" + port + endPoint);
     }
 
