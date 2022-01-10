@@ -1,5 +1,8 @@
 package net.leidra.gestbe.customer.customer.application;
 
+import net.leidra.gestbe.customer.customer.application.remove_customer.CustomerRemover;
+import net.leidra.gestbe.customer.customer.application.save_customer.CustomerSaver;
+import net.leidra.gestbe.customer.customer.application.search_customer.CustomerSearcher;
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
 import net.leidra.gestbe.customer.customer.infrastructure.repository.jdbc.JdbcCustomersRepository;
 import net.leidra.gestbe.testcontainer.PostgreSQLITContainer;
@@ -37,14 +40,14 @@ class CustomersCRUDTest extends PostgreSQLITContainer {
     @Test
     void should_create_modify_and_remove_a_customer() {
         final Customer customer = randomCustomer();
-        customerSaver.save(customer.id().id(), customer.name().name());
+        customerSaver.save(customer.id(), customer.name());
         assertThat(repository.existsById(customer.id())).isTrue();
 
-        customerSaver.save(customer.id().id(), randomCustomerName().name());
+        customerSaver.save(customer.id(), randomCustomerName());
 
-        assertThat(customerSearcher.searchById(customer.id().id())).isNotEmpty();
+        assertThat(customerSearcher.searchById(customer.id())).isNotEmpty();
 
-        customerRemover.removeById(customer.id().id());
+        customerRemover.removeById(customer.id());
         assertThat(repository.existsById(customer.id())).isFalse();
     }
 

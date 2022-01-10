@@ -1,5 +1,6 @@
 package net.leidra.gestbe.customer.customer.application;
 
+import net.leidra.gestbe.customer.customer.application.search_customer.CustomerSearcher;
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
 import net.leidra.gestbe.customer.customer.infrastructure.repository.jdbc.JdbcCustomersRepository;
 import net.leidra.gestbe.testcontainer.PostgreSQLITContainer;

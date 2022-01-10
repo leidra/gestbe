@@ -1,4 +1,4 @@
-package net.leidra.gestbe.customer.customer.application;
+package net.leidra.gestbe.customer.customer.application.search_customer;
 
 import lombok.AllArgsConstructor;
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
-import java.util.UUID;
 import java.util.stream.Stream;
 
 @Service
@@ -21,7 +20,7 @@ public class CustomerSearcher {
         return repository.findAll();
     }
 
-    public Optional<Customer> searchById(final UUID id) {
-        return repository.findById(new CustomerId(id));
+    public Optional<Customer> searchById(final CustomerId id) {
+        return repository.findById(id);
     }
 }
