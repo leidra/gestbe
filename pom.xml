@@ -14,7 +14,7 @@
     </modules>
     <groupId>net.leidra</groupId>
     <artifactId>gestbe</artifactId>
-    <version>0.5.0</version>
+    <version>0.6.0</version>
     <name>gestbe</name>
     <description>GestBe</description>
     <properties>
