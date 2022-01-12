@@ -11,7 +11,7 @@ public final class SyncCommandBus implements CommandBus {
     private final CommandHandlerHolder holder;
 
     @Override
-    public <T extends Command> void dispatch(T command) {
+    public <T extends Command> void dispatch(final T command) {
         holder.resolve((Class<T>) command.getClass()).handle(command);
     }
 }

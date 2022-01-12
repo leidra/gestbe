@@ -12,8 +12,8 @@ public final class SyncQueryBus implements QueryBus {
     private final QueryHandlerHolder holder;
 
     @Override
-    public <R, T extends Query<R>> R dispatch(T query) {
-        QueryHandler<T, R> queryHandler = holder.resolve(query.getClass());
+    public <R, T extends Query<R>> R dispatch(final T query) {
+        final QueryHandler<T, R> queryHandler = holder.resolve((Class<T>) query.getClass());
         return queryHandler.handle(query);
     }
 }

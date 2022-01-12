@@ -17,7 +17,7 @@ public final class QueryHandlerHolder {
         handlers.forEach(h -> this.handlers.put(h.getType(), h));
     }
 
-    public <R, T extends Query<R>> QueryHandler<T, R> resolve(Class<T> type) {
+    public <R, T extends Query<R>> QueryHandler<T, R> resolve(final Class<T> type) {
         return (QueryHandler<T, R>) handlers.get(type);
     }
 

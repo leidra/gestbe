@@ -31,8 +31,8 @@ class CustomerSearcherTest extends PostgreSQLITContainer {
 
     @Test
     void findAll() {
-        List<Customer> expectedCustomers = repository.findAll().toList();
-        List<Customer> actualCustomers = customerSearcher.searchAll().toList();
+        final List<Customer> expectedCustomers = repository.findAll().toList();
+        final List<Customer> actualCustomers = customerSearcher.searchAll().toList();
 
         Assertions.assertThat(actualCustomers).isEqualTo(expectedCustomers);
     }

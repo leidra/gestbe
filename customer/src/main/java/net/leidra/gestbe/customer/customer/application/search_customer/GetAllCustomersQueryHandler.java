@@ -13,7 +13,7 @@ public final class GetAllCustomersQueryHandler implements QueryHandler<GetAllCus
     private CustomerSearcher searcher;
 
     @Override
-    public Stream<Customer> handle(GetAllCustomersQuery query) {
+    public Stream<Customer> handle(final GetAllCustomersQuery query) {
         return searcher.searchAll();
     }
 }

@@ -11,15 +11,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 @Transactional
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/customers/{customer_id}")
-public class RestCustomerDeleteController {
+public class CustomerDeleteRestController {
     private final CommandBus commandBus;
 
     @DeleteMapping
-    public ResponseEntity<?> remove(@PathVariable("customer_id") final CustomerId customerId) {
+    public ResponseEntity<?> remove(@PathVariable("customer_id") final UUID customerId) {
         commandBus.dispatch(new RemoveCustomerCommand(customerId));
 
         return ResponseEntity.noContent().build();

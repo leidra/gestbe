@@ -2,6 +2,7 @@ package net.leidra.gestbe.customer.customer.application.remove_customer;
 
 import lombok.AllArgsConstructor;
 import net.leidra.gestbe.shared.application.CommandHandler;
+import net.leidra.gestbe.shared.domain.model.CustomerId;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,6 +12,6 @@ public final class RemoveCustomerCommandHandler implements CommandHandler<Remove
 
     @Override
     public void handle(final RemoveCustomerCommand command) {
-        remover.removeById(command.id());
+        remover.removeById(new CustomerId(command.id()));
     }
 }

@@ -30,8 +30,7 @@ public final class JdbcCustomersRepository implements CustomersRepository {
 
     @Override
     public Stream<Customer> findAll() {
-        final Map<String, Object> paramMap = Map.of();
-        return jdbcTemplate.queryForStream(FIND_ALL_QUERY, paramMap, ROW_MAPPER)
+        return jdbcTemplate.queryForStream(FIND_ALL_QUERY, Map.of(), ROW_MAPPER)
                 .map(JdbcCustomer::toCustomer);
     }
 

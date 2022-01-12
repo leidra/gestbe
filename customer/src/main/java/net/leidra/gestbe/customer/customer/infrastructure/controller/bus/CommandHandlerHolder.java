@@ -16,7 +16,7 @@ public final class CommandHandlerHolder {
         handlers.forEach(h -> this.handlers.put(h.getType(), h));
     }
 
-    public <T extends Command> CommandHandler<T> resolve(Class<T> type) {
+    public <T extends Command> CommandHandler<T> resolve(final Class<T> type) {
         return (CommandHandler<T>) handlers.get(type);
     }
 }
