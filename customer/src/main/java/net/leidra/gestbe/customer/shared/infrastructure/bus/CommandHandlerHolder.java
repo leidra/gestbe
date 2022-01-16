@@ -1,7 +1,7 @@
-package net.leidra.gestbe.customer.customer.infrastructure.controller.bus;
+package net.leidra.gestbe.customer.shared.infrastructure.bus;
 
-import net.leidra.gestbe.shared.application.Command;
-import net.leidra.gestbe.shared.application.CommandHandler;
+import net.leidra.gestbe.customer.shared.application.CommandHandler;
+import net.leidra.gestbe.customer.shared.application.Command;
 import org.springframework.stereotype.Component;
 import java.lang.reflect.Type;
 import java.util.HashMap;

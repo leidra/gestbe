@@ -1,8 +1,8 @@
-package net.leidra.gestbe.customer.customer.infrastructure.controller.bus;
+package net.leidra.gestbe.customer.shared.infrastructure.bus;
 
 import lombok.AllArgsConstructor;
-import net.leidra.gestbe.shared.application.Command;
-import net.leidra.gestbe.shared.application.CommandBus;
+import net.leidra.gestbe.customer.shared.application.Command;
+import net.leidra.gestbe.customer.shared.application.CommandBus;
 import org.springframework.stereotype.Component;
 
 @Component

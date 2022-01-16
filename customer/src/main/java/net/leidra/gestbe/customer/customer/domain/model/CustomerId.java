@@ -1,4 +1,4 @@
-package net.leidra.gestbe.shared.domain.model;
+package net.leidra.gestbe.customer.customer.domain.model;
 
 import lombok.Value;
 import org.springframework.util.Assert;

@@ -1,8 +1,5 @@
 package net.leidra.gestbe.customer.customer.domain.model;
 
-import net.leidra.gestbe.shared.domain.model.AuditDateTime;
-import net.leidra.gestbe.shared.domain.model.CustomerId;
-import net.leidra.gestbe.shared.domain.model.CustomerName;
 import org.jeasy.random.EasyRandom;
 import org.jetbrains.annotations.NotNull;
 

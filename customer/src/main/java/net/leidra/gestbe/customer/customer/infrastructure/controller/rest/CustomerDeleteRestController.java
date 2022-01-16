@@ -2,8 +2,7 @@ package net.leidra.gestbe.customer.customer.infrastructure.controller.rest;
 
 import lombok.AllArgsConstructor;
 import net.leidra.gestbe.customer.customer.application.remove_customer.RemoveCustomerCommand;
-import net.leidra.gestbe.shared.application.CommandBus;
-import net.leidra.gestbe.shared.domain.model.CustomerId;
+import net.leidra.gestbe.customer.shared.application.CommandBus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;

@@ -1,8 +1,8 @@
 package net.leidra.gestbe.customer.customer.application.remove_customer;
 
 import lombok.AllArgsConstructor;
-import net.leidra.gestbe.shared.application.CommandHandler;
-import net.leidra.gestbe.shared.domain.model.CustomerId;
+import net.leidra.gestbe.customer.shared.application.CommandHandler;
+import net.leidra.gestbe.customer.customer.domain.model.CustomerId;
 import org.springframework.stereotype.Component;
 
 @Component

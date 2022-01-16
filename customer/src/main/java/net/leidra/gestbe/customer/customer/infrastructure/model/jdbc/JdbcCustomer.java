@@ -3,9 +3,9 @@ package net.leidra.gestbe.customer.customer.infrastructure.model.jdbc;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
-import net.leidra.gestbe.shared.domain.model.AuditDateTime;
-import net.leidra.gestbe.shared.domain.model.CustomerId;
-import net.leidra.gestbe.shared.domain.model.CustomerName;
+import net.leidra.gestbe.customer.customer.domain.model.AuditDateTime;
+import net.leidra.gestbe.customer.customer.domain.model.CustomerId;
+import net.leidra.gestbe.customer.customer.domain.model.CustomerName;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 

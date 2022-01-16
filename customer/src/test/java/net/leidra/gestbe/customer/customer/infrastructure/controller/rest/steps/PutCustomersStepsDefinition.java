@@ -6,8 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
 import net.leidra.gestbe.customer.customer.infrastructure.repository.jdbc.JdbcCustomersRepository;
-import net.leidra.gestbe.shared.domain.model.CustomerId;
-import net.leidra.gestbe.shared.domain.model.CustomerName;
+import net.leidra.gestbe.customer.customer.domain.model.CustomerId;
+import net.leidra.gestbe.customer.customer.domain.model.CustomerName;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Optional;

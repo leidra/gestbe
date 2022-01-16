@@ -5,7 +5,7 @@ import net.leidra.gestbe.customer.customer.application.search_customer.GetAllCus
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
 import net.leidra.gestbe.customer.customer.infrastructure.controller.CustomerResponse;
 import net.leidra.gestbe.customer.customer.infrastructure.controller.CustomersResponse;
-import net.leidra.gestbe.shared.application.QueryBus;
+import net.leidra.gestbe.customer.shared.application.QueryBus;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 

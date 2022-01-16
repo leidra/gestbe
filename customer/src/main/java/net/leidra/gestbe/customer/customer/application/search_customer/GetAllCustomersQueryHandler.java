@@ -2,7 +2,7 @@ package net.leidra.gestbe.customer.customer.application.search_customer;
 
 import lombok.AllArgsConstructor;
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
-import net.leidra.gestbe.shared.application.QueryHandler;
+import net.leidra.gestbe.customer.shared.application.QueryHandler;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.Stream;

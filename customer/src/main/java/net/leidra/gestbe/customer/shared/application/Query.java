@@ -1,4 +1,4 @@
-package net.leidra.gestbe.shared.application;
+package net.leidra.gestbe.customer.shared.application;
 
 import java.io.Serializable;
 

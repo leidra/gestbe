@@ -1,6 +1,6 @@
 package net.leidra.gestbe.customer.customer.application.save_customer;
 
-import net.leidra.gestbe.shared.application.Command;
+import net.leidra.gestbe.customer.shared.application.Command;
 
 import java.util.UUID;
 

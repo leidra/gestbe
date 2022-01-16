@@ -1,7 +1,7 @@
 package net.leidra.gestbe.customer.customer.domain.repository;
 
 import net.leidra.gestbe.customer.customer.domain.model.Customer;
-import net.leidra.gestbe.shared.domain.model.CustomerId;
+import net.leidra.gestbe.customer.customer.domain.model.CustomerId;
 
 import java.util.Optional;
 import java.util.stream.Stream;

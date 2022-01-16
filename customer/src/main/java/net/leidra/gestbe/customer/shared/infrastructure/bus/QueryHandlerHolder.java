@@ -1,7 +1,7 @@
-package net.leidra.gestbe.customer.customer.infrastructure.controller.bus;
+package net.leidra.gestbe.customer.shared.infrastructure.bus;
 
-import net.leidra.gestbe.shared.application.Query;
-import net.leidra.gestbe.shared.application.QueryHandler;
+import net.leidra.gestbe.customer.shared.application.Query;
+import net.leidra.gestbe.customer.shared.application.QueryHandler;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Type;
