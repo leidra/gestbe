@@ -23,6 +23,7 @@
         <cucumber-java.version>7.2.2</cucumber-java.version>
         <easy-random-core.version>5.0.0</easy-random-core.version>
         <jackson-datatype-jsr310.version>2.13.1</jackson-datatype-jsr310.version>
+        <archunit.version>0.22.0</archunit.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -56,6 +57,12 @@
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-jsr310</artifactId>
                 <version>${jackson-datatype-jsr310.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.tngtech.archunit/archunit -->
+            <dependency>
+                <groupId>com.tngtech.archunit</groupId>
+                <artifactId>archunit</artifactId>
+                <version>${archunit.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
